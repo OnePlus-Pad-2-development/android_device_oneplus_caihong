@@ -23,6 +23,9 @@ TARGET_SCREEN_WIDTH := 2120
 PRODUCT_PACKAGES += \
     libui_shim.vendor
 
+# GMS
+WITH_GMS_COMMS_SUITE := false
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
