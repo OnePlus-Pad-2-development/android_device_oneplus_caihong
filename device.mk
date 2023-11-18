@@ -45,6 +45,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22877/build.NA.prop:$(TARGET_COPY_OUT_ODM)/etc/22877/build.NA.prop \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22877/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/22877/build.default.prop
 
+# GMS
+WITH_GMS_COMMS_SUITE := false
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
