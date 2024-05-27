@@ -12,6 +12,9 @@ DEVICE_PATH := device/oneplus/caihong
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP5DAAL1
 
+# Camera
+$(call soong_config_set,libcameraservice,ext_lib,//$(DEVICE_PATH):libcameraservice_extension.caihong)
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
