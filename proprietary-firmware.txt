@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2581_15.0.0.702(EX01)).
+## are from OnePlus Pad 2 (OPD2403_15.0.0.801(EX01)).
 
 abl.img;AB
 aop.img;AB
@@ -16,7 +16,6 @@ imagefv.img;AB
 keymaster.img;AB
 modem.img;AB
 oplus_sec.img;AB
-oplusstanvbk.img;AB
 qupfw.img;AB
 shrm.img;AB
 splash.img;AB
