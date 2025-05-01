@@ -23,6 +23,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
+TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_LEFT
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/caihong/BoardConfigVendor.mk
