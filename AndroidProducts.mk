@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_caihong.mk
+    $(LOCAL_DIR)/aosp_caihong.mk

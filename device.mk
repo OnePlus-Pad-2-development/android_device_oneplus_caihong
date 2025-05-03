@@ -20,7 +20,7 @@ TARGET_SCREEN_WIDTH := 2120
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \

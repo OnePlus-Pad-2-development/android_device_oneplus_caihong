@@ -12,12 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/oneplus/caihong/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/aosp/config/common_full_tablet_wifionly.mk)
 
 # Define target as tablet
 TARGET_IS_TABLET := true
 
-PRODUCT_NAME := lineage_caihong
+PRODUCT_NAME := aosp_caihong
 PRODUCT_DEVICE := caihong
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
