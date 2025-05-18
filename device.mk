@@ -18,6 +18,9 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 3000
 TARGET_SCREEN_WIDTH := 2120
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    sys.brightness.disable_gamma_conversion=true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aosp
