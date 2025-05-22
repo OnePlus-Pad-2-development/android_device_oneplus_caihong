@@ -9,8 +9,8 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_270
 # Graphics
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
-ro.surface_flinger.set_idle_timer_ms=60
-ro.surface_flinger.set_touch_timer_ms=120
+ro.surface_flinger.set_idle_timer_ms=100
+ro.surface_flinger.set_touch_timer_ms=200
 
 # USB
 vendor.usb.product_string=OnePlus Pad 2
