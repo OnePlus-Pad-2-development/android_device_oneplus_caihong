@@ -1,3 +1,8 @@
+# Display
+debug.sf.ignore_hwc_physical_display_orientation=true
+ro.bootanim.set_orientation_4630946941668558211=ORIENTATION_90
+ro.surface_flinger.primary_display_orientation=ORIENTATION_270
+
 # Bluetooth
 bluetooth.device.default_name=OnePlus Pad 2
 
