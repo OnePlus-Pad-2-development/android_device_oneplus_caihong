@@ -774,6 +774,10 @@ vendor/firmware/vpu30_2v_unsigned.mbn
 vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
 
+# Wireless pen firmware
+odm/firmware/wireless_pen/23976/cps8601_firmware.bin
+odm/firmware/wireless_pen/23978/cps8601_firmware.bin
+
 # WiFi
 odm/etc/wifi/kiwi/bdwlan.b0a
 odm/etc/wifi/kiwi/bdwlan.b0c
