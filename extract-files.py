@@ -37,32 +37,29 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'com.qti.sensor.lyt808',
-        'libarcsoft_triple_sat',
-        'libarcsoft_triple_zoomtranslator',
-        'libdualcam_optical_zoom_control',
-        'libdualcam_video_optical_zoom',
         'libhwconfigurationutil',
         'libpwirisfeature',
         'libpwirishalwrapper',
-        'libtriplecam_optical_zoom_control',
-        'libtriplecam_video_optical_zoom',
         'vendor.oplus.hardware.cammidasservice-V1-ndk',
         'vendor.oplus.hardware.camera_rfi-V1-ndk',
         'vendor.oplus.hardware.displaycolorfeature-V1-ndk',
-        'vendor.oplus.hardware.displaypanelfeature-V1-ndk',
         'vendor.pixelworks.hardware.display@1.0',
         'vendor.pixelworks.hardware.display@1.1',
         'vendor.pixelworks.hardware.display@1.2',
-        'vendor.pixelworks.hardware.feature-V1-ndk',
         'vendor.pixelworks.hardware.feature@1.0',
         'vendor.pixelworks.hardware.feature@1.1',
     ): lib_fixup_vendor_suffix,
 }
 
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'odm' else None
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
 blob_fixups: blob_fixups_user_type = {
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
-        .regex_replace('SystemCamera =  0;  0;  0;  1;  0; 1;', 'SystemCamera =  0;  0;  0;  0;  0; 0;'),
+        .regex_replace('SystemCamera =  0;  0;  0;  0;  1;', 'SystemCamera =  0;  0;  0;  0;  0;'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so')
         .remove_needed('android.hardware.graphics.common-V4-ndk.so'),
@@ -80,13 +77,15 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_handle_open')
         .clear_symbol_version('remote_register_buf_attr')
         .clear_symbol_version('remote_register_buf'),
-    'vendor/lib64/libcwb_qcom_aidl.so': blob_fixup()
+    ('odm/lib64/camera.device@3.3-impl_odm.so','odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.4-impl.so', 'odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.5-impl.so', 'odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.6-impl.so', 'odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.7-impl.so'): blob_fixup()
+        .replace_needed('camera.device@3.2-impl.so', 'camera.device@3.2-impl_odm.so')
+        .replace_needed('camera.device@3.3-impl.so', 'camera.device@3.3-impl_odm.so'),
+    'odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0-impl.so': blob_fixup()
         .add_needed('libui_shim.so'),
-    'vendor/etc/libnfc-nci.conf': blob_fixup()
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    'vendor/etc/libnfc-nxp.conf': blob_fixup()
-        .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0')
+    'vendor/lib64/libsdmcore.so': blob_fixup()
+        .replace_needed('libbase.so', 'libbase-v33.so'),
+    'vendor/bin/hw/vendor.qti.hardware.display.composer-service': blob_fixup()
+        .add_needed('libui_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

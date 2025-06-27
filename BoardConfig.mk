@@ -19,7 +19,6 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_KERNEL_CONFIG += vendor/oplus/caihong.config
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
