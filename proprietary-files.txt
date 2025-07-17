@@ -21,12 +21,10 @@ odm/lib64/liblvacfs_wrapper.so
 odm/lib64/libtfa98xx.so
 
 # Audio configs
-my_product/etc/audio_policy_volumes.xml:vendor/etc/audio_policy_volumes.xml
 my_product/etc/default_volume_tables.xml:vendor/etc/default_volume_tables.xml
 odm/etc/mixer_paths.xml
 odm/etc/resourcemanager.xml
 odm/etc/usecaseKvManager.xml
-odm/etc/usecaseKvManager.xml:vendor/etc/usecaseKvManager.xml
 vendor/etc/card-defs.xml
 vendor/etc/usecaseKvManager.xml
 
