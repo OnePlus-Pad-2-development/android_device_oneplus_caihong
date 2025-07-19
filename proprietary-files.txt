@@ -738,6 +738,14 @@ vendor/lib64/vendor.oplus.hardware.cwb-V1-ndk.so
 vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 vendor/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
 
+# Pogo pin keyboard
+odm/bin/hw/vendor.oplus.hardware.pogo_keyboard-service
+odm/etc/init/vendor.oplus.hardware.pogo_keyboard-service.rc
+odm/etc/vintf/manifest/vendor.oplus.hardware.pogo_keyboard.xml
+odm/lib64/libpogo_keyboard.so
+odm/lib64/vendor.oplus.hardware.pogo_keyboard-V1-ndk_platform.so
+odm/usr/idc/pogo_touchpad.idc
+
 # Sensors
 vendor/lib64/sensors.qsh.so
 
