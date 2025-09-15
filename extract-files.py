@@ -37,19 +37,9 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'vendor.oplus.hardware.displaypanelfeature-V1-ndk',
-    ): lib_fixup_all_suffixes,
-    (
-        'com.qti.sensor.lyt808',
         'libpwirisfeature',
         'libpwirishalwrapper',
-        'libarcsoft_triple_sat',
-        'libarcsoft_triple_zoomtranslator',
-        'libdualcam_optical_zoom_control',
-        'libdualcam_video_optical_zoom',
         'libhwconfigurationutil',
-        'libtriplecam_optical_zoom_control',
-        'libtriplecam_video_optical_zoom',
         'vendor.oplus.hardware.cammidasservice-V1-ndk',
         'vendor.oplus.hardware.displaycolorfeature-V1-ndk',
         'vendor.oplus.hardware.camera_rfi-V1-ndk',
@@ -65,7 +55,7 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
-        .regex_replace('SystemCamera =  0;  0;  0;  1;  0; 1;', 'SystemCamera =  0;  0;  0;  0;  0; 0;'),
+        .regex_replace('SystemCamera =  0;  0;  0;  0;  1;', 'SystemCamera =  0;  0;  0;  0;  0;'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so')
         .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
@@ -83,13 +73,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_handle_open')
         .clear_symbol_version('remote_register_buf_attr')
         .clear_symbol_version('remote_register_buf'),
-    'vendor/lib64/libcwb_qcom_aidl.so': blob_fixup()
+    'vendor/lib64/libsdmcore.so': blob_fixup()
+        .add_needed('libbase-v33.so'),
+    'vendor/bin/hw/vendor.qti.hardware.display.composer-service': blob_fixup()
         .add_needed('libui_shim.so'),
-    'vendor/etc/libnfc-nci.conf': blob_fixup()
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    'vendor/etc/libnfc-nxp.conf': blob_fixup()
-        .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
