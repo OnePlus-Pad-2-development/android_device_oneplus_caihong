@@ -3,6 +3,7 @@
 
 # Current blobs with deps disabled:
 # com.oplus.node.mvgsat, com.oplus.node.sstabphoto, com.qti.node.dewarp, com.qti.chi.override, libcamximageformatutils, libchifeature2 depends on multiple versions of the same aidl_interface:
+# vendor.qti.hardware.display.composer-service depends on multiple versions of the same aidl_interface: android.hardware.graphics.composer3-V2-ndk-source, android.hardware.graphics.composer3-V3-ndk-source
 
 # ACDB
 odm/etc/acdbdata/FTM/acdb_cal.acdb
@@ -1846,7 +1847,84 @@ odm/etc/display/qdcm_calib_data_AA545_P_3_A0005_dsc_cmd_mode_panel.json
 vendor/etc/ltm_config_AA545_P_3_A0005_dsc_cmd_mode_panel.xml
 vendor/etc/ltm_config_AC090_P_3_A0005_dsc_cmd_mode_panel.xml
 
+# Display (Features)
+odm/etc/init/hw/init.oplus.display.rc
+vendor/bin/feature_enabler_client
+vendor/etc/init/feature_enabler_client.rc
+vendor/lib64/libPanelChaplin.so
+
+# Display (HDR)
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
+vendor/lib64/libhdrvivid.so
+
+# Display (HWC)
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS;REQUIRED=vendor.qti.hardware.display.composer-service.rc,vendor.qti.hardware.display.composer-service.xml
+vendor/bin/qdcmss
+vendor/etc/init/qdcmss.rc
+vendor/etc/snapdragon_color_libs_config.xml
+vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libdpp_manager.so
+vendor/lib64/libdpps.so
+vendor/lib64/libgame_enhance.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libhistogram.so
+vendor/lib64/libhwcsensor.so
+vendor/lib64/libmemutils.so
+vendor/lib64/libqdcm-algo.so
+vendor/lib64/libqdcm-json-mode-parser.so
+vendor/lib64/libqdcm-mode-parser.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libsdmcore.so
+vendor/lib64/libsdmdal.so
+vendor/lib64/libsdmutils.so
+vendor/lib64/libsnapdragoncolor-manager.so
+vendor/lib64/libsnapdragoncolor-qdcm.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+
 # Display (Pixelworks)
+odm/bin/hw/vendor.pixelworks.hardware.feature-service
+odm/bin/irisConfig
+odm/etc/init/vendor.pixelworks.hardware.feature-service-lazy.rc
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.display-service.xml
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature-service.xml
+odm/etc/Custom_LUT_hlg.cube
+odm/etc/hdr3dlut_pq_qcom_grid_out_rgb.cube
+odm/lib64/libpwirisIoctlWrapper.so
+odm/lib64/libpwirisPCS.so
+odm/lib64/libpwiriscalibrate.so
+odm/lib64/libpwirisfeature.so
+odm/lib64/libpwirisfeaturehal.so
+odm/lib64/libpwirishalwrapper.so
+odm/lib64/libpwirispq.so
+odm/lib64/libpwirisservicei7.so
+odm/lib64/libpwirisservicei7p.so
+odm/lib64/libpwirisservicesi.so
+odm/lib64/libpwirissoft.so
+odm/lib64/libpwsoftirisPCS.so
+odm/lib64/libsnapdragoncolor-pxlw.so
+odm/lib64/vendor.pixelworks.hardware.display-V2-ndk.so
+odm/lib64/vendor.pixelworks.hardware.display-impl-i7.so
+odm/lib64/vendor.pixelworks.hardware.display-impl-i7p.so
+odm/lib64/vendor.pixelworks.hardware.display-impl-si.so
+odm/lib64/vendor.pixelworks.hardware.display-translate-V2-ndk.so
+odm/lib64/vendor.pixelworks.hardware.display@1.0.so
+odm/lib64/vendor.pixelworks.hardware.display@1.1.so
+odm/lib64/vendor.pixelworks.hardware.display@1.2.so
+odm/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
+vendor/lib64/libpwirisfeature.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libpwirishal.so
+vendor/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.display-V2-ndk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.display@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.display@1.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.display@1.2.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.feature@1.1.so;MODULE_SUFFIX=_vendor
 odm/etc/inparm/iris7_AA545_P_1_A0006_dsc_cmd_mode_panel/inParm14.txt
 odm/etc/inparm/iris7_AA545_P_1_A0006_dsc_cmd_mode_panel/inParm14_low.txt
 odm/etc/inparm/iris7_AA545_P_1_A0006_dsc_cmd_mode_panel/inParm17.txt
@@ -1922,6 +2000,58 @@ odm/firmware/iris7_ccf3.fw
 odm/firmware/iris7_ccf4.fw
 odm/firmware/pxlw_i7_panel_AA545_P_3_A0005_dsc_cmd.fw
 odm/firmware/pxlw_vtdr6130_fhd_plus_vid.fw
+
+# Display (SDM)
+vendor/bin/init.qti.graphics.sh
+vendor/etc/display/DPU1010.xml
+vendor/etc/display/DPU1020.xml
+vendor/etc/display/DPU10__.xml
+vendor/etc/display/DPU870.xml
+vendor/etc/display/DPU9__.xml
+vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/display/perf_hint_threshold.xml
+vendor/etc/display/thermallevel_to_fps.xml
+vendor/etc/init/init.qti.graphics.rc
+vendor/etc/clstc_config_library.xml
+vendor/lib64/libbacklight-calib.so
+vendor/lib64/libclstc_algorithm_adapter.so
+vendor/lib64/libclstc_gcp_adapter.so
+vendor/lib64/libclstc_tm.so
+vendor/lib64/libdigital-dimming.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libhdr_backlight_adapter.so
+vendor/lib64/libintervmipc.so
+vendor/lib64/libqrtrclient.so
+vendor/lib64/libqseed3.so
+vendor/lib64/librcmask.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtestutils.so
+vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libvmfilexfer.so
+
+# Display postprocessing
+vendor/bin/hw/vendor.qti.hardware.display.color-service
+vendor/bin/ppd
+vendor/etc/init/vendor.qti.hardware.display.color-service.rc
+vendor/lib64/libdisp-aba.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/vendor.display.color@1.4.so
+vendor/lib64/vendor.display.color@1.5.so
+vendor/lib64/vendor.display.postproc@1.0.so
+
+# Display firmware
+vendor/firmware/dpAP_full.mbn
+vendor/firmware/dpAP_mini.mbn
+vendor/firmware/dpAP_modemssr.mbn
+vendor/firmware/dpMSA.mbn
 
 # Dolby Vision
 odm/etc/dolby/display/dolby_vision.cfg
@@ -2019,6 +2149,28 @@ vendor/gpu/kbc/unified_ksqs.bin
 # NFC
 odm/etc/nfc/libnfc-mtp-SN220.conf_22877:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_22877:vendor/etc/libnfc-nci.conf
+
+# OPLUS Display
+odm/bin/hw/vendor.oplus.hardware.displaypanelfeature-service
+odm/bin/cwb_utils_aidl
+odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc
+odm/etc/vintf/manifest/manifest_displaycolorfeature_aidl.xml
+odm/etc/vintf/manifest/manifest_oplus_cwb_aidl.xml
+odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
+odm/etc/displaycolorfeaturecfg.xml
+odm/lib64/libdisplayaidlapis.so
+odm/lib64/libdisplaycolorfeature.so
+odm/lib64/libdisplayfossfeature_nature.so
+odm/lib64/libdpaservice.so
+odm/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_odm
+vendor/etc/2024-01-12_platform_RSA_license_a226ad89-a187-4b14-9447-d20bfe9dac1a.pfm
+vendor/etc/oem_51_prj_OppoLTM8650_1689712162019.pfm
+vendor/lib64/libcwb_qcom_aidl.so
+vendor/lib64/vendor.oplus.hardware.cwb-V1-ndk.so
+vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
+vendor/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # Sensors config
 odm/etc/sensor/config/json_list
