@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 3000
 TARGET_SCREEN_WIDTH := 2120
 
+# Display
+PRODUCT_PACKAGES += \
+    libui_shim.vendor
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
