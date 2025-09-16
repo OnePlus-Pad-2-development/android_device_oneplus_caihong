@@ -22,6 +22,7 @@ namespace_imports = [
     'hardware/oplus',
     'hardware/qcom-caf/sm8650',
     'vendor/oneplus/sm8650-common',
+    'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
 def lib_fixup_all_suffixes(lib: str, partition: str, *args, **kwargs):
@@ -31,11 +32,17 @@ def lib_fixup_all_suffixes(lib: str, partition: str, *args, **kwargs):
         return f'{lib}_vendor'
     return lib
 
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'odm' else None
+
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'vendor.oplus.hardware.displaypanelfeature-V1-ndk',
+    ):lib_fixup_odm_suffix,
     (
         'libpwirisfeature',
         'libpwirishalwrapper',
@@ -46,8 +53,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.pixelworks.hardware.display@1.0',
         'vendor.pixelworks.hardware.display@1.1',
         'vendor.pixelworks.hardware.display@1.2',
-        'vendor.pixelworks.hardware.display-V2-ndk',
-        'vendor.pixelworks.hardware.feature-V1-ndk',
         'vendor.pixelworks.hardware.feature@1.0',
         'vendor.pixelworks.hardware.feature@1.1',
     ): lib_fixup_vendor_suffix,

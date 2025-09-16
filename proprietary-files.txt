@@ -88,7 +88,6 @@ odm/etc/lvacfs_params/2mic/audiozoom_9.txt
 
 # Camera
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
-odm/bin/hw/virtualcameraprovider
 odm/etc/camera/CameraHWConfiguration.config
 odm/etc/camera/CameraOemConfiguration.config
 odm/etc/camera/anc_cl_kernel.cache
@@ -146,7 +145,6 @@ odm/lib64/libFaceBeautyPICap.so
 odm/lib64/libFaceBeautyPre.so
 odm/lib64/libFaceDistortionCorrection.so
 odm/lib64/libFilterWrapper.so
-odm/lib64/libGaiaClient_vnd.so
 odm/lib64/libHDRDetection.so
 odm/lib64/libHIS.so
 odm/lib64/libImageWarpMask.so;FIX_SONAME
@@ -159,6 +157,7 @@ odm/lib64/libOPAlgoCamAiUnifySkin.so
 odm/lib64/libOPAlgoCamFaceBeautyCap.so
 odm/lib64/libOPAlgoCamFaceRestore.so
 odm/lib64/libOPAlgoCamHybridRaw.so
+odm/lib64/libAIEngine.so
 odm/lib64/libOPAlgoCamSinglePortrait.so
 odm/lib64/libOPLUSMotionDetection.so
 odm/lib64/libOplusPDCore.so
@@ -201,10 +200,12 @@ odm/lib64/libancbase_segmulti.so
 odm/lib64/libapsexif.so
 odm/lib64/libapspng.so
 odm/lib64/libapsyuv.so
+odm/lib64/libapsjpeg.so
 odm/lib64/libarcsoft_distortion_correction.so
 odm/lib64/libarcsoft_dualcam_bokeh_api.so
 odm/lib64/libarcsoft_dualcam_refocus_left.so
 odm/lib64/libarcsoft_dualcam_refocus_preview.so
+odm/lib64/libarc.ion.so
 odm/lib64/libarcsoft_dualcam_refocus_uw.so
 odm/lib64/libarcsoft_hdr_denoise_api.so
 odm/lib64/libarcsoft_high_dynamic_range.so
@@ -477,11 +478,9 @@ vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmmcamera_pnc.so
-vendor/lib64/libnanopb.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
-vendor/lib64/libos.so
 vendor/lib64/libpnc_cl_program.bin
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
@@ -492,9 +491,7 @@ vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsgutils2.so
 vendor/lib64/libspectre.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
-vendor/lib64/libthreadutils.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libubifocus.so
@@ -733,7 +730,7 @@ odm/lib64/libdisplaycolorfeature.so
 odm/lib64/libdisplayfossfeature_nature.so
 odm/lib64/libdpaservice.so
 odm/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so
-odm/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_odm
 vendor/etc/2024-01-12_platform_RSA_license_a226ad89-a187-4b14-9447-d20bfe9dac1a.pfm
 vendor/etc/oem_51_prj_OppoLTM8650_1689712162019.pfm
 vendor/lib64/libcwb_qcom_aidl.so;DISABLE_CHECKELF
