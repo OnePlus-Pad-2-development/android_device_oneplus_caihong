@@ -50,6 +50,9 @@ PRODUCT_COPY_FILES += \
 # GMS
 WITH_GMS_COMMS_SUITE := false
 
+# Livedisplay
+$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
