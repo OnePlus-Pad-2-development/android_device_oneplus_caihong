@@ -44,8 +44,8 @@ $(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
 
 # Regional properties
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/recovery/root/vendor/odm/etc/23926/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/23926/build.default.prop \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/23976/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/23976/build.default.prop
+	$(LOCAL_PATH)/recovery/root/vendor/odm/etc/CN/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/CN/build.default.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/GLO/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/GLO/build.default.prop
 
 # GMS
 WITH_GMS_COMMS_SUITE := false
