@@ -19,6 +19,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 3000
 TARGET_SCREEN_WIDTH := 2120
 
+# Carrier
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.carrier=wifi-only
+
 # Display
 PRODUCT_PACKAGES += \
     libui_shim.vendor
