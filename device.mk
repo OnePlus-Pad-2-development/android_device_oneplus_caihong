@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
 # Recovery
 $(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
 
+# Sensors
+PRODUCT_PACKAGES += \
+    folio-daemon
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
