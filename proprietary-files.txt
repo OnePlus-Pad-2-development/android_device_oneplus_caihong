@@ -791,5 +791,5 @@ odm/etc/wifi/kiwi/regdb.bin
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Wireless pen firmware
-odm/firmware/wireless_pen/23976/cps8601_firmware.bin
-odm/firmware/wireless_pen/23978/cps8601_firmware.bin
+odm/firmware/wireless_pen/23976/cps8601_firmware.bin;SYMLINK=odm/firmware/wireless_pen/23926/cps8601_firmware.bin
+odm/firmware/wireless_pen/23978/cps8601_firmware.bin;SYMLINK=odm/firmware/wireless_pen/23927/cps8601_firmware.bin
