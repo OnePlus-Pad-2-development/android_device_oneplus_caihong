@@ -25,17 +25,12 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
-def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'odm' else None
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    (
-        'vendor.oplus.hardware.displaypanelfeature-V1-ndk',
-    ):lib_fixup_odm_suffix,
     (
         'libhwconfigurationutil',
         'libpwirisfeature',
