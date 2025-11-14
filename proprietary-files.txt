@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus Pad 2 (OPD2403_15.0.0.1301(EX01)).
+## are from OnePlus Pad 2 (OPD2403_16.0.0.202(EX01)).
 
 # Current blobs with deps disabled:
 # com.oplus.node.mvgsat, com.oplus.node.sstabphoto, com.qti.node.dewarp, com.qti.chi.override, libcamximageformatutils, libchifeature2 depends on multiple versions of the same aidl_interface: android.hardware.graphics.allocator-V1-ndk, android.hardware.graphics.allocator-V2-ndk-source
@@ -15,6 +15,9 @@ odm/etc/acdbdata/MOS/acdb_cal.acdb
 odm/etc/acdbdata/MOS/workspaceFileXml.qwsp
 odm/etc/acdbdata/Audio_Parameter_Version.txt
 odm/etc/acdbdata/acdb_cal.acdb
+
+# ADSP modules
+odm/lib/rfsa/adsp/oplusmss/unsigned/libQnnHtpV75Skel.so;MODULE_SUFFIX=.oplusmss.aiboost
 
 # Audio
 odm/lib64/lib_lvacfs.so
@@ -193,6 +196,7 @@ odm/lib64/libaisd.so
 odm/lib64/libaiseg.so
 odm/lib64/libaisr.so
 odm/lib64/libalCFR.so
+odm/lib64/libalog.so
 odm/lib64/libancbase_rt_fusion.so;FIX_SONAME
 odm/lib64/libancbase_segbase.so
 odm/lib64/libancbase_segment.so
@@ -300,6 +304,7 @@ vendor/lib64/camera/components/com.qti.hvx.binning.so
 vendor/lib64/camera/components/com.qti.hwcfg.bps.so
 vendor/lib64/camera/components/com.qti.hwcfg.ife.so
 vendor/lib64/camera/components/com.qti.hwcfg.ipe.so
+vendor/lib64/camera/components/com.qti.hwcfg.tfe.so
 vendor/lib64/camera/components/com.qti.node.afbfusion.so
 vendor/lib64/camera/components/com.qti.node.aon.so
 vendor/lib64/camera/components/com.qti.node.customhwnode.so
@@ -708,6 +713,14 @@ vendor/firmware/qps615_fw.bin
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
+
+# Neural networks
+odm/lib64/oplusmss/libQnnHtp.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libQnnHtpPrepare.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libQnnHtpV75Stub.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libQnnSystem.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libaiboost.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libaiboost_qnn_external_delegate.so;MODULE_SUFFIX=.oplusmss;FIX_SONAME
 
 # NVRAM
 odm/bin/nvram_qmi
