@@ -17,9 +17,9 @@ odm/etc/acdbdata/Audio_Parameter_Version.txt
 odm/etc/acdbdata/acdb_cal.acdb
 
 # ADSP modules
-odm/lib/rfsa/adsp/aiboost/signed/libQnnHtpV75Skel.so;MODULE_SUFFIX=.aiboost
-odm/lib/rfsa/adsp/aiboost/signed/libaiboostubwc_skel.so;MODULE_SUFFIX=.aiboost
-odm/lib/rfsa/adsp/oplusmss/unsigned/libQnnHtpV75Skel.so;MODULE_SUFFIX=.oplusmss.aiboost
+odm/lib/rfsa/adsp/aiboost/signed/libQnnHtpV75Skel.so
+odm/lib/rfsa/adsp/aiboost/signed/libaiboostubwc_skel.so
+odm/lib/rfsa/adsp/oplusmss/unsigned/libQnnHtpV75Skel.so
 odm/lib/rfsa/adsp/capi_v3_oprec.so
 odm/lib/rfsa/adsp/libCalculator_skel.so
 odm/lib/rfsa/adsp/libQnnHtpV75.so
