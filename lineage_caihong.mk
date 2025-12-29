@@ -23,8 +23,8 @@ PRODUCT_CHARACTERISTICS := nosdcard,tablet
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi_64-user 16 BP2A.250605.015 1761878850182 release-keys" \
-    BuildFingerprint=OnePlus/OPD2403EEA/OP5DAAL1:16/UKQ1.231108.001/U.R4T3.332d2e6-1280408-129863e:user/release-keys \
+    BuildDesc="qssi_64-user 16 BP2A.250605.015 1764323465334 release-keys" \
+    BuildFingerprint=OnePlus/OPD2403IN/OP5DAAL1:16/UKQ1.231108.001/U.R4T3.2f5f456-deb173-e28402:user/release-keys \
     DeviceName=OP5DAAL1 \
     DeviceProduct=OPD2403 \
     SystemDevice=OP5DAAL1 \
