@@ -289,12 +289,6 @@
     <!-- Whether device has screen with higher aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">false</bool>
 
-    <!-- Sensor types -->
-    <string name="pickup_sensor_type"></string>
-
-    <!-- Sensor trigger values -->
-    <item name="pickup_sensor_value" format="float" type="dimen"></item>
-
     <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
          refresh rate than the default value specified here, the framework may use those higher
