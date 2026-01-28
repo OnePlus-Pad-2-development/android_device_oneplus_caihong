@@ -1,5 +1,5 @@
 #
-# SPDX-FileCopyrightText: 2025 The LineageOS Project
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -23,7 +23,7 @@ PRODUCT_CHARACTERISTICS := nosdcard,tablet
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi_64-user 16 BP2A.250605.015 1764323465334 release-keys" \
+    BuildDesc="qssi_64-user 16 BP2A.250605.015 1768876946191 release-keys" \
     BuildFingerprint=OnePlus/OPD2403IN/OP5DAAL1:16/UKQ1.231108.001/U.R4T3.2f5f456-deb173-e28402:user/release-keys \
     DeviceName=OP5DAAL1 \
     DeviceProduct=OPD2403 \
