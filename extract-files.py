@@ -34,7 +34,6 @@ lib_fixups: lib_fixups_user_type = {
         'libhwconfigurationutil',
         'libpwirisfeature',
         'libpwirishalwrapper',
-        'vendor.oplus.hardware.displaycolorfeature-V1-ndk',
         'vendor.pixelworks.hardware.display@1.0',
         'vendor.pixelworks.hardware.display@1.1',
         'vendor.pixelworks.hardware.display@1.2',
