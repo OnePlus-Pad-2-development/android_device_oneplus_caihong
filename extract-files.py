@@ -62,13 +62,6 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_handle_open')
         .clear_symbol_version('remote_register_buf_attr')
         .clear_symbol_version('remote_register_buf'),
-    (
-        'odm/lib64/libdisplayfossfeature_nature.so',
-        'odm/lib64/libdisplaycolorfeature.so',
-        'vendor/lib64/libdpps.so',
-        'vendor/lib64/libsnapdragoncolor-manager.so',
-    ): blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libsdmcore.so': blob_fixup()
         .add_needed('libbase-v33.so'),
     'vendor/bin/hw/vendor.qti.hardware.display.composer-service': blob_fixup()
