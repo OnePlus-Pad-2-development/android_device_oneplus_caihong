@@ -39,6 +39,11 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.pixelworks.hardware.display@1.2',
         'vendor.pixelworks.hardware.feature@1.0',
         'vendor.pixelworks.hardware.feature@1.1',
+        'vendor.display.color@1.0',
+        'vendor.display.color@1.1',
+        'vendor.display.color@1.2',
+        'vendor.display.color@1.3',
+        'vendor.display.postproc@1.0'
     ): lib_fixup_vendor_suffix,
 }
 
