@@ -58,9 +58,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Regional properties
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/CN/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/CN/build.default.prop \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/GLO/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/GLO/build.default.prop
+REGIONAL_PROP_FILES := $(wildcard $(LOCAL_PATH)/properties/*/*.prop)
+
+PRODUCT_COPY_FILES += $(foreach f,$(REGIONAL_PROP_FILES), \
+    $(f):$(TARGET_COPY_OUT_ODM)/etc/$(patsubst $(LOCAL_PATH)/properties/%,%,$(f)) \
+    $(f):$(TARGET_COPY_OUT_RECOVERY)/root/vendor/odm/etc/$(patsubst $(LOCAL_PATH)/properties/%,%,$(f)))
 
 # Recovery
 $(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
