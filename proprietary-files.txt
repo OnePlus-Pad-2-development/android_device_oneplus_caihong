@@ -672,7 +672,7 @@ vendor/firmware/dpMSA.mbn
 # Dolby Vision
 odm/etc/dolby/display/dolby_vision.cfg
 odm/etc/dolby/dolby_vision.cfg
-odm/etc/media_codecs_dolby_vision.xml
+odm/etc/media_codecs_dolby_vision.xml:vendor/etc/media_codecs_dolby_vision.xml
 odm/lib64/libdolbyclstc.so
 vendor/etc/dolby_vision.cfg
 
